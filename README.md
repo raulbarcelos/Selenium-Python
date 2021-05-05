@@ -1,2 +1,2 @@
 # Selenium+Python
- Repositório para testes automatizados com Python + Selenium
+ Repositório para testes automatizados com Selenium + Python
