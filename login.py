@@ -32,5 +32,11 @@ def realizar_login():
     senha = usuario.senha
     login_senha.send_keys(senha)  # Enviar key password
 
+    # carregar elemento do botão de login
+    login_form = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//button[@class='ui-button -warning -medium -block--sm']"))
+    )
+    login_form.click()  # Clicar no botão login
+
 
 realizar_login()
