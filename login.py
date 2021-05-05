@@ -24,5 +24,13 @@ def realizar_login():
     email = usuario.email
     login_email.send_keys(email)  # Enviar key email
 
+    #carregar elemento do campo formulário de preencher senha
+    login_senha = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "login_senha"))
+    )
+    login_senha.click()
+    senha = usuario.senha
+    login_senha.send_keys(senha)  # Enviar key password
+
 
 realizar_login()
